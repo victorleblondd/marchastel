@@ -1,0 +1,20 @@
+# =====================================================================
+#  AGENDA : LES PROCHAINS RENDEZ-VOUS
+#  Dans l'ordre chronologique (le plus proche en haut).
+#  Un rendez-vous disparaît tout seul du site le lendemain de son dernier jour.
+#  La rubrique « À ne pas manquer » de l'accueil n'apparaît que s'il y a des rendez-vous à venir.
+#
+#  - date: "AAAA-MM-JJ"          premier jour
+#    fin: "AAAA-MM-JJ"           facultatif : dernier jour (si plusieurs jours)
+#    quand: "Samedi 17 octobre"  la date, telle qu'elle s'affiche
+#    heure: "14 h"               facultatif
+#    titre: "Nom du rendez-vous"
+#    detail: "Une phrase."       facultatif
+#    lieu: "Salle du conseil"    facultatif
+#    lien: "/vie-locale/"        facultatif : page du site qui en parle
+#
+#  Aucun rendez-vous n'est annoncé par la mairie au 15 octobre 2026 : la liste est vide ([]).
+#  Pour ajouter le premier rendez-vous, remplacer la ligne [] par le modèle ci-dessus, rempli.
+# =====================================================================
+
+[]

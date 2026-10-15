@@ -1,0 +1,81 @@
+# Conseil municipal élu le 15 mars 2026 (onze conseillers), installé le 20 mars 2026.
+# Source : Répertoire national des élus (ministère de l'Intérieur), version du 11 août 2026.
+
+election: "15 mars 2026"
+
+maire:
+  nom: "Jean-Pierre Escourolle"
+  fonction: "Maire"
+
+adjoints:
+  - nom: "Jean-Louis Deflisque"
+    fonction: "1er adjoint"
+  - nom: "Sandrine Durand"
+    fonction: "2e adjointe"
+  - nom: "Jean-Claude Chabrier"
+    fonction: "3e adjoint"
+
+# Ordre alphabétique
+conseillers:
+  - "Valérie Bornet"
+  - "Christophe Bos"
+  - "Elisabeth Flagel"
+  - "Manon Izoulet Pissavy"
+  - "Jacques Tissandier"
+  - "Olivier Zanatta"
+  - "Véronique Zanatta"
+
+# Les séances du conseil municipal (la plus récente en haut), d'après les avis de la mairie.
+#   date: "AAAA-MM-JJ"   quand: "Vendredi 2 octobre 2026 à 19 h"   ordre_du_jour: liste des points
+seances:
+  - date: "2026-10-02"
+    quand: "Vendredi 2 octobre 2026 à 19 h"
+    ordre_du_jour:
+      - "Décision modificative sur le budget d'investissement"
+      - "Délégation de signature à un élu pour l'urbanisme"
+      - "Diagnostic intérieur de l'église"
+      - "Demande d'achat de terrain"
+      - "Investissement sur les travaux routiers"
+      - "Travaux de la mairie et de la salle associative"
+      - "Recensement : agent recenseur et agent coordonnateur"
+      - "Désignation des délégués aux comités de bassin"
+  - date: "2026-07-18"
+    quand: "Samedi 18 juillet 2026 à 10 h"
+    ordre_du_jour:
+      - "Intégration au syndicat de l'eau de la Sumène"
+      - "Enfouissement des réseaux électriques et de télécommunication à Soubrevèze"
+      - "Mutualisation de la garantie communale du PLUi"
+      - "Désignation des délégués au PLUi (un titulaire et un suppléant)"
+      - "Renouvellement de la certification PEFC des forêts"
+  - date: "2026-06-05"
+    quand: "Vendredi 5 juin 2026 à 20 h"
+    ordre_du_jour:
+      - "Désignation des délégués pour les élections sénatoriales"
+      - "Commission communale des impôts directs : membres et suppléants"
+      - "Délégations consenties au maire par le conseil municipal (budget, signature)"
+      - "Subventions 2026 aux associations et au voyage scolaire"
+      - "Commissions de la voirie et des chemins ruraux, des bâtiments communaux et d'appel d'offres"
+      - "Panneaux d'autorisation de stationnement"
+      - "Panneaux d'interdiction de feux et de dépôt de déchets sur les communaux des villages"
+      - "Vente d'herbe de parcelles communales"
+  - date: "2026-04-30"
+    quand: "Jeudi 30 avril 2026 à 20 h"
+    ordre_du_jour:
+      - "Approbation du budget"
+  - date: "2026-04-24"
+    quand: "Vendredi 24 avril 2026 à 20 h"
+    ordre_du_jour:
+      - "Vote du budget"
+      - "Indemnités du maire et des adjoints"
+      - "Temps de travail du secrétariat"
+      - "Horaires d'ouverture de la mairie"
+      - "Achat d'un tracteur tondeuse"
+      - "Projet d'aménagement de la mairie"
+      - "Projet de routes"
+  - date: "2026-03-20"
+    quand: "Vendredi 20 mars 2026 à 20 h"
+    ordre_du_jour:
+      - "Élection du maire et des adjoints"
+      - "Indemnités du maire et des adjoints"
+      - "Approbation du compte financier unique 2025"
+      - "Formation des commissions"

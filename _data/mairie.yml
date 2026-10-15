@@ -1,0 +1,31 @@
+# Coordonnées et horaires de la mairie — utilisés dans l'en-tête, le pied de page et les pages.
+# Modifier ici une seule fois : tout le site se met à jour.
+# Sources : avis de la mairie « Nouveaux horaires d'ouverture de la mairie » (8 septembre 2026)
+# et « Infos pratiques mairie » ; site actuel de la commune (marchastel15.fr), page Contact.
+
+nom: "Mairie de Marchastel"
+adresse_ligne1: "Le Bourg"
+adresse_ligne2: "15400 Marchastel"
+telephone: "04 71 78 40 22"
+telephone_lien: "+33471784022"
+email: "marchastel.mairie@wanadoo.fr"
+facebook_url: "https://www.facebook.com/marchastel15"
+
+# Horaires d'ouverture du secrétariat de mairie (depuis le 14 septembre 2026)
+horaires_court: "le lundi de 10 h à 12 h et le jeudi de 13 h à 15 h 30"
+horaires_note: "Fermée les autres jours."
+horaires:
+  - jour: Lundi
+    matin: "10 h – 12 h"
+  - jour: Mardi
+    ferme: true
+  - jour: Mercredi
+    ferme: true
+  - jour: Jeudi
+    matin: "13 h – 15 h 30"
+  - jour: Vendredi
+    ferme: true
+  - jour: Samedi
+    ferme: true
+  - jour: Dimanche
+    ferme: true

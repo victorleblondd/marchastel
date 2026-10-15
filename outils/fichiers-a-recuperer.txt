@@ -1,0 +1,16 @@
+# Fichiers que GitHub va chercher automatiquement et ajouter au site
+# (programme : outils/recuperer_fichiers.py, lancé par .github/workflows/recuperer-fichiers.yml).
+#
+# Une ligne par fichier :  adresse-source   chemin-dans-le-site   [largeur maximale]   [rognage en bas, en %]
+# - Si le chemin se termine par .pdf et que la source est une image (affiche), elle est convertie en PDF A4.
+#   Plusieurs images séparées par « | » (sans espace) donnent un PDF de plusieurs pages.
+# - Pour une photo .jpg : la troisième colonne donne la largeur maximale, la quatrième (facultative)
+#   le pourcentage de la hauteur retiré en bas de la photo.
+# - Un fichier déjà présent dans le site n'est jamais téléchargé une deuxième fois.
+
+# Blason du Cantal (repris du site de Saint-Bonnet-de-Condat)
+https://raw.githubusercontent.com/victorleblondd/saint-bonnet-de-condat/main/assets/images/blason-cantal.png  assets/images/blason-cantal.png
+
+# Photo de l'accueil : l'église de Marchastel (Père Igor, Wikimedia Commons, CC BY-SA 4.0),
+# réduite à 1 600 px de large et rognée de 4 % en bas (sans personne à l'image)
+https://upload.wikimedia.org/wikipedia/commons/1/1f/Marchastel_%C3%A9glise.jpg  assets/images/eglise-marchastel.jpg  1600  4
