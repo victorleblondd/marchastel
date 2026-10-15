@@ -1,0 +1,30 @@
+{%- comment -%}
+  Les prochains rendez-vous (réglages : _data/agenda.yml).
+  Paramètre facultatif : limite=4 (nombre maximal de rendez-vous affichés).
+  Les rendez-vous passés sont retirés à chaque publication du site, et masqués
+  dès le lendemain par le script du site (date de Paris).
+{%- endcomment -%}
+{%- assign _mois = "janv.,févr.,mars,avr.,mai,juin,juil.,août,sept.,oct.,nov.,déc." | split: "," -%}
+{%- assign aujourdhui = site.time | date: "%Y-%m-%d" -%}
+{%- assign n = 0 -%}
+<ul class="agenda" data-agenda>
+  {%- for ev in site.data.agenda -%}
+  {%- assign fin = ev.fin | default: ev.date -%}
+  {%- if fin >= aujourdhui -%}
+  {%- if include.limite and n >= include.limite -%}{%- break -%}{%- endif -%}
+  {%- assign _m = ev.date | date: "%-m" | minus: 1 %}
+  <li class="agenda-item" data-fin="{{ fin }}">
+    <time class="agenda-jour" datetime="{{ ev.date }}"><span class="agenda-num">{{ ev.date | date: "%-d" }}</span><span class="agenda-mois">{{ _mois[_m] }}</span></time>
+    <div class="agenda-texte">
+      <p class="agenda-quand">{{ ev.quand }}{% if ev.heure %}, {{ ev.heure }}{% endif %}</p>
+      <h3 class="agenda-titre">{% if ev.lien %}<a href="{{ ev.lien | relative_url }}">{{ ev.titre }}</a>{% else %}{{ ev.titre }}{% endif %}</h3>
+      {%- if ev.detail or ev.lieu %}
+      <p class="agenda-detail">{{ ev.detail }}{% if ev.detail and ev.lieu %} {% endif %}{% if ev.lieu %}<span class="agenda-lieu">{% include icone.html nom="lieu" %}{{ ev.lieu }}</span>{% endif %}</p>
+      {%- endif %}
+    </div>
+  </li>
+  {%- assign n = n | plus: 1 -%}
+  {%- endif -%}
+  {%- endfor %}
+</ul>
+<p class="aucun-resultat" data-agenda-vide{% if n > 0 %} hidden{% endif %}>Aucun rendez-vous n'est annoncé pour le moment.</p>
