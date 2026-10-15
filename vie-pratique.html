@@ -1,0 +1,181 @@
+---
+title: "Vie pratique"
+permalink: /vie-pratique/
+chapo: "Urgences et santé, eau potable, sécheresse, déchets, écobuage, fibre optique et école : les informations utiles au quotidien."
+description: "Vie pratique à Marchastel : numéros d'urgence, pharmacie de Riom-ès-Montagnes, eau potable et fuites, restrictions liées à la sécheresse, tri et déchetteries, écobuage, raccordement à la fibre optique et école de Lugarde."
+---
+{%- assign m = site.data.mairie -%}
+{%- assign s = site.data.secheresse -%}
+<nav class="sommaire" aria-label="Sur cette page">
+  <ul>
+    <li><a href="#sante">Urgences et santé</a></li>
+    <li><a href="#eau">Eau potable</a></li>
+    {%- if s.actif %}
+    <li><a href="#secheresse">Sécheresse</a></li>
+    {%- endif %}
+    <li><a href="#dechets">Déchets et tri</a></li>
+    <li><a href="#ecobuage">Écobuage</a></li>
+    <li><a href="#fibre">Fibre optique</a></li>
+    <li><a href="#ecole">École</a></li>
+  </ul>
+</nav>
+
+<section class="bloc" id="sante" aria-labelledby="titre-sante">
+  <h2 id="titre-sante" class="titre-decore">Urgences et santé</h2>
+  <ul class="urgences" aria-label="Numéros d'urgence">
+    <li><a href="tel:112"><span class="urgence-numero">112</span><span>Appel d'urgence européen</span></a></li>
+    <li><a href="tel:15"><span class="urgence-numero">15</span><span>SAMU</span></a></li>
+    <li><a href="tel:18"><span class="urgence-numero">18</span><span>Pompiers</span></a></li>
+    <li><a href="tel:17"><span class="urgence-numero">17</span><span>Gendarmerie</span></a></li>
+  </ul>
+  <div class="grille-3">
+    <div class="panneau">
+      <h3>Pharmacie Santé et Montagnes</h3>
+      <p>À Riom-ès-Montagnes, du lundi au samedi, de 9 h à 12 h et de 14 h à 19 h.</p>
+      <div class="coordonnees">
+        <p>{% include icone.html nom="lieu" %}<span>1 place du Monument, 15400 Riom-ès-Montagnes</span></p>
+        <p>{% include icone.html nom="telephone" %}<a href="tel:+33471780086">04 71 78 00 86</a></p>
+      </div>
+    </div>
+    <div class="panneau">
+      <h3>Médecins</h3>
+      <p>Les cabinets médicaux les plus proches se trouvent à Riom-ès-Montagnes, à quelques kilomètres.</p>
+      <p>La nuit, le week-end et les jours fériés, appelez le 15.</p>
+    </div>
+    <div class="panneau">
+      <h3>Autres numéros utiles</h3>
+      <ul class="liste-simple">
+        <li><a href="tel:3237"><strong>3237</strong></a> : pharmacie de garde</li>
+        <li><a href="tel:114"><strong>114</strong></a> : urgence par SMS, pour les personnes sourdes ou malentendantes</li>
+        <li><a href="tel:+33472116911"><strong>04 72 11 69 11</strong></a> : centre antipoison de Lyon</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="eau" aria-labelledby="titre-eau">
+  <h2 id="titre-eau" class="titre-decore">Eau potable</h2>
+  <div class="grille-asymetrique">
+    <div>
+      <p>L'eau potable de la commune est distribuée depuis des châteaux d'eau. En période de sécheresse, leur niveau peut baisser fortement : chaque fuite compte, sur le réseau comme chez les particuliers.</p>
+      <h3>Relever son compteur</h3>
+      <p>La mairie demande chaque année aux abonnés de relever eux-mêmes leur compteur d'eau (en 2025, avant le 30 novembre) et de lui transmettre le relevé par courriel, à <a href="mailto:{{ m.email }}">{{ m.email | replace: "@", "@<wbr>" }}</a> : votre nom, le lieu où se trouve le compteur et l'index lu.</p>
+      <h3>Les syndicats des eaux</h3>
+      <p>La commune est membre du syndicat intercommunal des eaux de Lugarde-Marchastel et du syndicat intercommunal des eaux de la Sumène, dont l'intégration était à l'ordre du jour du conseil municipal du 18 juillet 2026.</p>
+    </div>
+    <div class="pile">
+      <div class="panneau panneau--info">
+        <h3>Signaler une fuite</h3>
+        <p>Signalez toute fuite, même réparée : ces informations permettent au technicien d'analyser les chutes de pression.</p>
+        <div class="coordonnees">
+          <p>{% include icone.html nom="telephone" %}<span><a href="tel:+33471784015">04 71 78 40 15</a>, <a href="tel:{{ m.telephone_lien }}">{{ m.telephone }}</a> ou <a href="tel:+33648367086">06 48 36 70 86</a></span></p>
+        </div>
+      </div>
+      <div class="panneau">
+        <h3>Économiser l'eau</h3>
+        <p>Douches courtes, robinets fermés, machines lancées à pleine charge ; pour les éleveurs, surveillance des systèmes d'arrêt et des flotteurs des abreuvoirs.</p>
+        <p><a class="lien-fleche" href="{{ '/infos-alertes/' | relative_url }}#2026-08-07-restrictions-de-l-usage-de-l-eau-la-commune-en-crise-secheresse">L'appel de la mairie{% include icone.html nom="fleche" %}</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- if s.actif %}
+<section class="bloc" id="secheresse" aria-labelledby="titre-secheresse">
+  <h2 id="titre-secheresse" class="titre-decore">Sécheresse : restrictions des usages de l'eau</h2>
+  <div class="panneau panneau--alerte">
+    <p class="mise-en-avant">Pour l'eau potable, Marchastel est placée au {{ s.niveau_libelle }} sécheresse ({{ s.arrete }}).</p>
+    <p>Pour les particuliers, notamment :</p>
+    <ul>
+      <li>arrosage des pelouses, des massifs fleuris et des jardins d'agrément interdit ;</li>
+      <li>arrosage des potagers interdit de 8 h à 20 h ;</li>
+      <li>arrosage des arbres et arbustes interdit, sauf plantations de moins de trois ans, de 20 h à 8 h et deux nuits par semaine au plus ;</li>
+      <li>lavage des véhicules interdit, sauf impératif sanitaire ;</li>
+      <li>remplissage et vidange des piscines privées interdits ;</li>
+      <li>nettoyage des façades, toitures, trottoirs et voiries interdit, sauf impératif sanitaire ou de sécurité ;</li>
+      <li>fontaines interdites, sauf en circuit fermé.</li>
+    </ul>
+    <p>Les restrictions peuvent évoluer. Toutes les mesures qui s'appliquent à votre adresse sont détaillées sur <a href="https://vigieau.gouv.fr/" rel="noopener">vigieau.gouv.fr</a>, le site officiel de l'État. Plus d'informations sur <a href="https://www.cantal.gouv.fr" rel="noopener">cantal.gouv.fr</a>.</p>
+  </div>
+</section>
+{%- endif %}
+
+<section class="bloc" id="dechets" aria-labelledby="titre-dechets">
+  <h2 id="titre-dechets" class="titre-decore">Déchets et tri</h2>
+  <p class="bloc-intro">La communauté de communes du Pays Gentiane a confié la collecte et le tri des déchets au SYTEC, le syndicat des territoires de l'Est Cantal, qui trie, traite et valorise les déchets pour réduire les quantités enfouies.</p>
+  <div class="grille-3">
+    <div class="panneau">
+      <h3>Ordures ménagères</h3>
+      <p>Les déchets non recyclables (pots de yaourt, sachets en plastique, barquettes et emballages en polystyrène…) se jettent dans un sac fermé, déposé ensuite dans un conteneur.</p>
+      <p>Déchets alimentaires : pensez au compostage… ou aux poules !</p>
+    </div>
+    <div class="panneau">
+      <h3>Petits déchets à part</h3>
+      <p>Ampoules et piles : des bacs de collecte sont à votre disposition dans les grandes surfaces.</p>
+      <p>Cartouches d'encre vides : les enfants du regroupement pédagogique Lugarde – Marchastel les récupèrent pour financer les projets de l'école.</p>
+    </div>
+    <div class="panneau">
+      <h3>Encombrants et déchetteries</h3>
+      <p>Produits toxiques, meubles, déchets verts, appareils électroniques, huiles, vêtements, cartons : direction la déchetterie de Condat ou de Riom-ès-Montagnes.</p>
+      <p>Vous ne pouvez pas vous y rendre ? La commune organise une collecte mensuelle : faites-vous connaître auprès de la mairie, au <a href="tel:{{ m.telephone_lien }}">{{ m.telephone }}</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="ecobuage" aria-labelledby="titre-ecobuage">
+  <h2 id="titre-ecobuage" class="titre-decore">Écobuage</h2>
+  <div class="grille-asymetrique">
+    <div>
+      <p>L'écobuage est réglementé par arrêté préfectoral. Pour tout écobuage avant le 30 avril, une <strong>déclaration préalable en mairie et aux pompiers</strong> est indispensable. Un écobuage non déclaré est passible d'une amende de 450 €, et un feu non maîtrisé peut mobiliser d'importants moyens de secours, imposer des évacuations et la fermeture de routes.</p>
+      <p><a class="lien-fleche" href="{{ '/infos-alertes/' | relative_url }}#2026-04-14-ecobuages-prudence-et-declaration-obligatoire">L'avis de la mairie{% include icone.html nom="fleche" %}</a></p>
+    </div>
+    <div class="panneau panneau--info">
+      <h3>Les bons gestes</h3>
+      <ul class="liste-coches">
+        <li>Dégager l'espace autour du feu.</li>
+        <li>Tenir compte du vent et de son évolution.</li>
+        <li>Fractionner les éléments à brûler.</li>
+        <li>Garder de l'eau à proximité pour éteindre à tout moment.</li>
+        <li>Rester présent et joignable par téléphone.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="fibre" aria-labelledby="titre-fibre">
+  <h2 id="titre-fibre" class="titre-decore">Fibre optique</h2>
+  <div class="grille-asymetrique">
+    <div>
+      <p>La commune est, dans sa grande majorité, desservie par le réseau de fibre optique d'Auvergne Très Haut Débit, porté par la Région Auvergne-Rhône-Alpes et exploité par Orange. Pour être raccordé, contactez l'opérateur de votre choix : il s'occupe des démarches.</p>
+      <p>Pour des raisons techniques, quelques secteurs ne sont pas encore desservis : Rejateix, Bressols, Terrou, Péchouzou et quelques bâtiments à Soubrevèze.</p>
+      <p><a class="lien-fleche" href="https://www.auvergne-numerique.fr/" rel="noopener">auvergne-numerique.fr{% include icone.html nom="externe" %}</a></p>
+    </div>
+    <div class="panneau panneau--accent">
+      <h3>Adresse refusée par l'opérateur ?</h3>
+      <p>Les adresses de Marchastel enregistrées chez les opérateurs sont souvent erronées. Pour commander malgré tout :</p>
+      <ol>
+        <li>ouvrez la <a href="https://www.auvergne-numerique.fr/carte-fibre-v2/" rel="noopener">carte de la fibre</a> et choisissez la commune de Marchastel ;</li>
+        <li>repérez votre maison sur le plan : un point vert indique que la fibre est disponible ;</li>
+        <li>cliquez sur le point, puis sur « + infos », et notez la référence qui commence par <strong>IMB/</strong> ;</li>
+        <li>donnez cette référence à l'opérateur, en précisant que l'adresse est fausse.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="ecole" aria-labelledby="titre-ecole">
+  <h2 id="titre-ecole" class="titre-decore">École</h2>
+  <div class="grille-asymetrique">
+    <div>
+      <p>Les enfants de Marchastel sont scolarisés dans le cadre du regroupement pédagogique intercommunal (RPI) Lugarde – Marchastel, à l'école publique de Lugarde, de la maternelle au CM2. L'école dispose d'une cantine.</p>
+      <p>Pour une inscription, renseignez-vous auprès de la mairie.</p>
+    </div>
+    <div class="panneau">
+      <h3>École de Lugarde</h3>
+      <div class="coordonnees">
+        <p>{% include icone.html nom="lieu" %}<span>4 rue des Écoles<br>15190 Lugarde</span></p>
+        <p>{% include icone.html nom="telephone" %}<a href="tel:+33471784358">04 71 78 43 58</a></p>
+      </div>
+    </div>
+  </div>
+</section>
