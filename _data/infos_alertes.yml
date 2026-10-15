@@ -1,0 +1,220 @@
+# =====================================================================
+#  INFOS & ALERTES DE LA MAIRIE
+#  La publication la plus récente se place TOUT EN HAUT de la liste.
+#
+#  Ajouter un avis en PDF :
+#    1. Déposer le fichier PDF dans le dossier  documents/infos-alertes/
+#       Nom conseillé : AAAA-MM-JJ-sujet-court.pdf  (sans accents ni espaces)
+#       (ou ajouter son adresse dans outils/fichiers-a-recuperer.txt : voir README.md)
+#    2. Copier le modèle ci-dessous tout en haut de la liste, puis le remplir.
+#
+#  - date: "AAAA-MM-JJ"               date de l'avis
+#    heure: "HH:MM"                   facultatif
+#    type: alerte                     alerte (rouge) ou info (bleu)
+#    theme: eau                       eau, travaux, vie (services et vie locale)
+#    titre: "Titre de l'avis"
+#    resume: "Une ou deux phrases qui disent l'essentiel."
+#    pdf: "AAAA-MM-JJ-sujet-court.pdf"    facultatif : nom exact du fichier déposé
+#    bandeau_jusquau: "AAAA-MM-JJ"    facultatif : bandeau rouge sur l'accueil
+#                                     jusqu'à cette date incluse (alertes)
+#    lien: "/conseil-municipal/"      facultatif : page du site à ouvrir
+#    lien_texte: "Texte du lien"      (avec « lien »)
+#
+#  Champ facultatif « texte » : le texte complet de l'avis (version lisible
+#  sans ouvrir le PDF). Les avis sans PDF affichent ce texte.
+# =====================================================================
+
+- date: "2026-10-05"
+  type: alerte
+  theme: travaux
+  titre: "Coupure d'électricité le lundi 12 octobre sur le secteur d'Auliac"
+  resume: "Enedis a programmé une intervention, avec une coupure de courant, le lundi 12 octobre 2026 de 13 h 30 à 15 h 30, sur le secteur d'Auliac."
+  texte: |
+    <p>Enedis a programmé une intervention, accompagnée d'une <strong>coupure de courant</strong>, le <strong>lundi 12 octobre 2026, de 13 h 30 à 15 h 30</strong>, sur le secteur d'Auliac.</p>
+
+- date: "2026-10-02"
+  type: info
+  theme: vie
+  titre: "Conseil municipal du vendredi 2 octobre à 19 h"
+  resume: "Le conseil municipal se réunira le vendredi 2 octobre à 19 h en salle du conseil : budget d'investissement, urbanisme, église, achat de terrain, travaux routiers, travaux de la mairie, recensement."
+  lien: "/conseil-municipal/#seances"
+  lien_texte: "Les séances du conseil municipal"
+  texte: |
+    <p>Le conseil municipal se réunira le <strong>vendredi 2 octobre à 19 h</strong>, en salle du conseil. L'ordre du jour est le suivant :</p>
+    <ul>
+      <li>décision modificative sur le budget d'investissement ;</li>
+      <li>délégation de signature à un élu pour l'urbanisme ;</li>
+      <li>diagnostic intérieur de l'église ;</li>
+      <li>demande d'achat de terrain ;</li>
+      <li>investissement sur les travaux routiers ;</li>
+      <li>travaux de la mairie et de la salle associative ;</li>
+      <li>recensement : agent recenseur et agent coordonnateur ;</li>
+      <li>désignation des délégués aux comités de bassin ;</li>
+      <li>questions diverses.</li>
+    </ul>
+
+- date: "2026-09-11"
+  type: info
+  theme: vie
+  titre: "Retour sur l'hommage aux anciens élus"
+  resume: "La municipalité a rendu hommage aux élus de la précédente mandature qui ne font plus partie du conseil : un beau moment de convivialité, de partage et de bonne humeur."
+  texte: |
+    <p>La municipalité a souhaité rendre hommage aux élus ayant œuvré lors de la précédente mandature et qui ne font plus partie du nouveau conseil. Ce fut un beau moment de convivialité, de partage et de bonne humeur.</p>
+    <p>Un grand merci à tous, et tout particulièrement aux anciens maires, Baptiste Émorine et Robert Flagel.</p>
+
+- date: "2026-09-08"
+  type: info
+  theme: vie
+  titre: "Nouveaux horaires d'ouverture de la mairie à partir du 14 septembre"
+  resume: "À compter du lundi 14 septembre 2026, la mairie est ouverte au public le lundi de 10 h à 12 h et le jeudi de 13 h à 15 h 30."
+  lien: "/mairie/#contact"
+  lien_texte: "Contact et horaires de la mairie"
+  texte: |
+    <p>À compter du <strong>14 septembre 2026</strong>, les horaires d'ouverture au public de la mairie sont les suivants :</p>
+    <ul>
+      <li><strong>lundi</strong> : de 10 h à 12 h ;</li>
+      <li><strong>jeudi</strong> : de 13 h à 15 h 30.</li>
+    </ul>
+    <p>Jusqu'au 10 septembre, le secrétariat était ouvert le lundi, le mardi et le jeudi, de 13 h 30 à 15 h 30.</p>
+    <p><strong>Adresse</strong> : Le Bourg, 15400 Marchastel · <strong>Téléphone</strong> : <a href="tel:+33471784022">04 71 78 40 22</a> · <strong>Courriel</strong> : <a href="mailto:marchastel.mairie@wanadoo.fr">marchastel.mairie@wanadoo.fr</a>.</p>
+
+- date: "2026-09-07"
+  type: info
+  theme: eau
+  titre: "Eau : assouplissement des restrictions au 31 août"
+  resume: "Grâce aux pluies, les restrictions d'eau sont revenues au niveau d'alerte renforcée le 31 août. La situation reste fragile : chacun est invité à utiliser l'eau de manière responsable et mesurée."
+  texte: |
+    <p>Les pluies des dernières semaines ont concerné l'ensemble du département et permis aux cours d'eau de retrouver des débits plus importants. Malgré des volumes parfois conséquents, la situation reste fragile et temporaire, l'été étant encore loin d'être terminé.</p>
+    <p>Cette légère amélioration a permis de ramener les mesures de restriction au niveau d'<strong>alerte renforcée</strong> le 31 août 2026.</p>
+    <p>Il nous est malgré tout demandé d'utiliser de manière responsable et mesurée cette ressource précieuse et fragile, absolument nécessaire.</p>
+    <p>Pour en savoir plus : le <a href="https://www.cantal.gouv.fr/contenu/telechargement/25884/201814/file/20260827%20CP_S%C3%A9cheresse%20S35_VD.pdf">communiqué de la préfecture du Cantal</a> (PDF).</p>
+
+- date: "2026-08-25"
+  type: info
+  theme: vie
+  titre: "Hommage aux anciens élus, dimanche 6 septembre à 11 h 30"
+  resume: "La municipalité organise une cérémonie conviviale pour remercier les élus qui ont œuvré pour la commune durant de longues années. Tous les habitants sont invités, en salle du conseil."
+  texte: |
+    <p>La municipalité de Marchastel organise une cérémonie conviviale pour remercier et rendre hommage aux élus qui ont œuvré pour la mairie durant de longues années.</p>
+    <p>Nous sommes tous invités à nous joindre à cet hommage le <strong>dimanche 6 septembre à 11 h 30</strong>, en salle du conseil. Il sera suivi d'un moment convivial, avec amuse-bouche et apéritif. Venez nombreux et nombreuses !</p>
+
+- date: "2026-08-07"
+  type: alerte
+  theme: eau
+  titre: "Restrictions de l'usage de l'eau : la commune en crise sécheresse"
+  resume: "Les châteaux d'eau sont au plus bas et la préfecture a renforcé les restrictions d'usage de l'eau du réseau. Économisez l'eau et signalez toute fuite à la mairie."
+  texte: |
+    <p>En raison des conditions météorologiques, nous sommes en <strong>état de crise sécheresse</strong> et les niveaux des châteaux d'eau sont au plus bas. Rien ne laisse espérer une amélioration de la situation à court terme : nous devons tous et toutes économiser l'eau.</p>
+    <p><strong>Restrictions d'usage.</strong> La préfecture a renforcé les restrictions. En résumé, il est interdit d'utiliser l'eau du réseau pour :</p>
+    <ul>
+      <li>arroser les jardins entre 8 h et 20 h ;</li>
+      <li>arroser les pelouses, les massifs fleuris, les arbres et les arbustes (sous conditions) ;</li>
+      <li>nettoyer les véhicules, les terrasses, les façades et les toitures (hors contraintes sanitaires) ;</li>
+      <li>remplir ou remettre à niveau les piscines et les spas.</li>
+    </ul>
+    <p>Le détail des mesures figure dans l'<a href="https://www.cantal.gouv.fr/contenu/telechargement/25769/200901/file/AP_Limitation_Cantal_2026-08-06_signe.pdf">arrêté préfectoral du 6 août 2026</a> (PDF) et sur <a href="https://vigieau.gouv.fr/">vigieau.gouv.fr</a>, constamment mis à jour.</p>
+    <p><strong>Signalement des fuites.</strong> Chaque goutte compte : une fuite sur le réseau ou chez un particulier peut fragiliser l'ensemble de la distribution. Signalez-nous les fuites, même réparées, au <a href="tel:+33471784015">04 71 78 40 15</a>, au <a href="tel:+33471784022">04 71 78 40 22</a> ou au <a href="tel:+33648367086">06 48 36 70 86</a> : ces informations sont indispensables au technicien pour analyser les chutes de pression et maintenir le niveau des châteaux d'eau.</p>
+    <p><strong>Appel à la sobriété.</strong> Nous comptons sur le civisme, la responsabilité et la solidarité de chacun pour réduire au strict minimum sa consommation :</p>
+    <ul>
+      <li>particuliers : douches très courtes, fermeture des robinets, report des lavages non essentiels ou lavages à pleine charge… ;</li>
+      <li>professionnels : surveillance des systèmes d'arrêt et des flotteurs pour l'alimentation du bétail.</li>
+    </ul>
+    <p>Sans cette sobriété partagée par tous, des interruptions de l'alimentation en eau potable seront inévitables. Merci par avance pour votre coopération et votre vigilance.</p>
+    <p><em>Cette alerte a été levée le 7 septembre 2026, avec l'assouplissement des restrictions.</em></p>
+
+- date: "2026-07-17"
+  type: info
+  theme: vie
+  titre: "Conseil municipal du samedi 18 juillet à 10 h"
+  resume: "Le conseil municipal se réunira le samedi 18 juillet à 10 h en salle du conseil : syndicat de l'eau de la Sumène, enfouissement des réseaux à Soubrevèze, PLUi, certification PEFC des forêts."
+  lien: "/conseil-municipal/#seances"
+  lien_texte: "Les séances du conseil municipal"
+  texte: |
+    <p>Le conseil municipal se réunira le <strong>samedi 18 juillet à 10 h</strong>, en salle du conseil. L'ordre du jour est le suivant :</p>
+    <ul>
+      <li>intégration au syndicat de l'eau de la Sumène ;</li>
+      <li>enfouissement des réseaux électriques et de télécommunication à Soubrevèze ;</li>
+      <li>mutualisation de la garantie communale du PLUi ;</li>
+      <li>désignation des délégués au PLUi (un titulaire et un suppléant) ;</li>
+      <li>renouvellement de la certification PEFC des forêts ;</li>
+      <li>questions diverses.</li>
+    </ul>
+
+- date: "2026-06-03"
+  type: info
+  theme: vie
+  titre: "Conseil municipal du vendredi 5 juin à 20 h"
+  resume: "Le conseil municipal se réunira le vendredi 5 juin à 20 h en salle du conseil : délégués pour les élections sénatoriales, commissions communales, subventions aux associations, stationnement, feux et dépôts de déchets sur les communaux."
+  lien: "/conseil-municipal/#seances"
+  lien_texte: "Les séances du conseil municipal"
+  texte: |
+    <p>Le conseil municipal se réunira le <strong>vendredi 5 juin à 20 h</strong>, en salle du conseil, à la mairie. L'ordre du jour est le suivant :</p>
+    <ul>
+      <li>désignation des délégués pour les élections sénatoriales ;</li>
+      <li>désignation des membres et des suppléants de la commission communale des impôts directs ;</li>
+      <li>délégations consenties au maire par le conseil municipal : délégation au budget et délégation de signature ;</li>
+      <li>subventions 2026 aux associations et au voyage scolaire ;</li>
+      <li>désignation des membres de la commission communale de la voirie et des chemins ruraux ;</li>
+      <li>désignation des membres de la commission des bâtiments communaux ;</li>
+      <li>désignation des membres de la commission d'appel d'offres ;</li>
+      <li>pose de panneaux d'autorisation de stationnement ;</li>
+      <li>pose de panneaux d'interdiction de feux et de dépôt de déchets sur les communaux des villages ;</li>
+      <li>vente d'herbe de parcelles communales ;</li>
+      <li>questions diverses.</li>
+    </ul>
+
+- date: "2026-04-26"
+  type: info
+  theme: vie
+  titre: "Conseil municipal du jeudi 30 avril à 20 h : approbation du budget"
+  resume: "Le conseil municipal se réunira dans la salle du conseil le jeudi 30 avril à 20 h. Ordre du jour : l'approbation du budget."
+  lien: "/conseil-municipal/#seances"
+  lien_texte: "Les séances du conseil municipal"
+
+- date: "2026-04-24"
+  type: info
+  theme: vie
+  titre: "Conseil municipal du vendredi 24 avril à 20 h"
+  resume: "Le conseil municipal est convoqué le vendredi 24 avril à 20 h dans la salle du conseil de la mairie : vote du budget, indemnités des élus, horaires d'ouverture de la mairie, matériel, projets d'aménagement et de routes."
+  lien: "/conseil-municipal/#seances"
+  lien_texte: "Les séances du conseil municipal"
+  texte: |
+    <p>Le conseil municipal est convoqué le <strong>vendredi 24 avril 2026 à 20 h</strong> dans la salle du conseil de la mairie. Ordre du jour :</p>
+    <ul>
+      <li>vote du budget ;</li>
+      <li>indemnités du maire et des adjoints ;</li>
+      <li>temps de travail du secrétariat ;</li>
+      <li>horaires d'ouverture de la mairie ;</li>
+      <li>achat d'un tracteur tondeuse ;</li>
+      <li>projet d'aménagement de la mairie ;</li>
+      <li>projet de routes.</li>
+    </ul>
+
+- date: "2026-04-14"
+  type: info
+  theme: vie
+  titre: "Écobuages : prudence, et déclaration obligatoire"
+  resume: "Des dizaines d'hectares sont déjà partis en fumée dans le Cantal. Pour tout écobuage avant le 30 avril, une déclaration préalable en mairie et aux pompiers est indispensable, sous peine d'une amende de 450 €."
+  lien: "/vie-pratique/#ecobuage"
+  lien_texte: "Écobuage : les règles et les bons gestes"
+  texte: |
+    <p>La gendarmerie du Cantal est déjà intervenue à plus de quinze reprises ces derniers jours pour des écobuages non maîtrisés. Des dizaines d'hectares sont déjà partis en fumée.</p>
+    <p><strong>Rappel</strong> : la pratique de l'écobuage est réglementée par arrêté préfectoral. Pour tout écobuage avant le 30 avril de chaque année, une <strong>déclaration préalable en mairie et aux pompiers</strong> est indispensable.</p>
+    <p>Au-delà de la sanction (amende de 450 €), le risque est l'incendie non maîtrisé, qui mobilise d'importants moyens de protection et peut imposer l'évacuation d'habitants et la déviation de routes. Pensez aux conséquences du feu, mais aussi à celles de la propagation des fumées.</p>
+    <p>Les bonnes pratiques :</p>
+    <ul>
+      <li>s'assurer que l'espace autour du feu est suffisamment dégagé pour éviter la propagation ;</li>
+      <li>tenir compte du vent et de son évolution dans la durée ;</li>
+      <li>travailler en fractionnant les éléments à brûler ;</li>
+      <li>être en capacité d'éteindre le foyer à tout moment (eau à proximité) ;</li>
+      <li>rester présent tout le temps et rester joignable par téléphone.</li>
+    </ul>
+    <p>Ensemble, soyons responsables.</p>
+
+- date: "2026-04-07"
+  type: info
+  theme: vie
+  titre: "Le tableau du nouveau conseil municipal"
+  resume: "Le conseil municipal élu en mars 2026 : maire, Jean-Pierre Escourolle ; 1er adjoint, Jean-Louis Deflisque ; 2e adjointe, Sandrine Durand ; 3e adjoint, Jean-Claude Chabrier."
+  lien: "/conseil-municipal/"
+  lien_texte: "Le conseil municipal"
