@@ -1,0 +1,80 @@
+---
+title: "La mairie"
+permalink: /mairie/
+chapo: "Horaires et coordonnées de la mairie de Marchastel, démarches administratives et accompagnement par France Services."
+description: "Mairie de Marchastel : adresse, téléphone, courriel, horaires d'ouverture du secrétariat, démarches administratives et France Services à Riom-ès-Montagnes."
+---
+{%- assign m = site.data.mairie -%}
+<nav class="sommaire" aria-label="Sur cette page">
+  <ul>
+    <li><a href="#contact">Contact et horaires</a></li>
+    <li><a href="#demarches">Vos démarches</a></li>
+    <li><a href="#informations">Rester informé</a></li>
+  </ul>
+</nav>
+
+<section class="bloc" id="contact" aria-labelledby="titre-contact">
+  <h2 id="titre-contact" class="titre-decore">Nous contacter</h2>
+  <div class="grille-3">
+    <div class="panneau">
+      <h3>Coordonnées</h3>
+      <div class="coordonnees">
+        <p>{% include icone.html nom="lieu" %}<span>{{ m.nom }}<br>{{ m.adresse_ligne1 }}<br>{{ m.adresse_ligne2 }}</span></p>
+        <p>{% include icone.html nom="telephone" %}<a href="tel:{{ m.telephone_lien }}">{{ m.telephone }}</a></p>
+        <p>{% include icone.html nom="email" %}<a href="mailto:{{ m.email }}">{{ m.email | replace: "@", "@<wbr>" }}</a></p>
+        <p>{% include icone.html nom="externe" %}<a href="{{ m.facebook_url }}" rel="noopener">La page Facebook de la commune</a></p>
+      </div>
+    </div>
+    <div class="panneau">
+      <h3>Horaires d'ouverture</h3>
+      {% include horaires.html semaine_complete=true %}
+      <p class="note">Horaires du secrétariat de mairie, ouvert au public, depuis le 14 septembre 2026.</p>
+    </div>
+    <div class="panneau panneau--info">
+      <h3>Rencontrer vos élus</h3>
+      <p>Pour rencontrer le maire ou l'un des adjoints, adressez-vous au secrétariat de mairie, aux heures d'ouverture, au <a href="tel:{{ m.telephone_lien }}">{{ m.telephone }}</a>, ou écrivez à la mairie.</p>
+      <p><a class="lien-fleche" href="{{ '/conseil-municipal/' | relative_url }}">Le conseil municipal{% include icone.html nom="fleche" %}</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="demarches" aria-labelledby="titre-demarches">
+  <h2 id="titre-demarches" class="titre-decore">Vos démarches</h2>
+  <div class="grille-asymetrique">
+    <div>
+      <p>Le secrétariat de mairie vous renseigne sur vos démarches : état civil, inscription sur les listes électorales, urbanisme, cimetière… Le secrétariat n'est ouvert que deux demi-journées par semaine : pensez à appeler ou à écrire avant de vous déplacer.</p>
+      <p>Toutes les démarches administratives, et la plupart des formulaires, sont en ligne sur <a href="https://www.service-public.gouv.fr/" rel="noopener">service-public.gouv.fr</a>, le site officiel de l'administration française. Les demandes de carte d'identité, de passeport, de permis de conduire et de carte grise se font sur le site de l'<a href="https://ants.gouv.fr/" rel="noopener">Agence nationale des titres sécurisés</a>.</p>
+    </div>
+    <div class="panneau">
+      <h3>France Services à Riom-ès-Montagnes</h3>
+      <p>Une équipe de la communauté de communes du Pays Gentiane vous accompagne gratuitement dans vos démarches du quotidien : santé, retraite, impôts, emploi, logement, démarches en ligne.</p>
+      <div class="coordonnees">
+        <p>{% include icone.html nom="lieu" %}<span>Place de la Gare<br>15400 Riom-ès-Montagnes</span></p>
+        <p>{% include icone.html nom="telephone" %}<a href="tel:+33471782950">04 71 78 29 50</a></p>
+        <p>{% include icone.html nom="email" %}<a href="mailto:efs@pays-gentiane.com">efs@<wbr>pays-gentiane.com</a></p>
+        <p>{% include icone.html nom="horloge" %}<span>Du lundi au jeudi, 9 h – 12 h et 14 h – 17 h ; le vendredi, 9 h – 12 h</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="informations" aria-labelledby="titre-informations">
+  <h2 id="titre-informations" class="titre-decore">Rester informé</h2>
+  <div class="grille-3">
+    <div class="panneau">
+      <h3>Infos &amp; Alertes</h3>
+      <p>Les avis de la mairie : eau, coupures, travaux, sécurité, animations.</p>
+      <p><a class="lien-fleche" href="{{ '/infos-alertes/' | relative_url }}">Les derniers avis{% include icone.html nom="fleche" %}</a></p>
+    </div>
+    <div class="panneau">
+      <h3>Les séances du conseil</h3>
+      <p>Les dates et les ordres du jour des séances du conseil municipal, ouvertes au public.</p>
+      <p><a class="lien-fleche" href="{{ '/conseil-municipal/' | relative_url }}#seances">Les séances du conseil{% include icone.html nom="fleche" %}</a></p>
+    </div>
+    <div class="panneau">
+      <h3>Facebook</h3>
+      <p>Retrouvez aussi la commune sur sa page Facebook.</p>
+      <p><a class="lien-fleche" href="{{ m.facebook_url }}" rel="noopener">Marchastel sur Facebook{% include icone.html nom="externe" %}</a></p>
+    </div>
+  </div>
+</section>

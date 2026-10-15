@@ -1,0 +1,61 @@
+---
+title: "Mentions légales"
+permalink: /mentions-legales/
+description: "Mentions légales, sources, crédits, données personnelles et accessibilité du site de la commune de Marchastel."
+---
+{%- assign m = site.data.mairie -%}
+<div class="texte-legal">
+  <section class="bloc" aria-labelledby="titre-editeur">
+    <h2 id="titre-editeur">Éditeur du site</h2>
+    {%- if site.proposition %}
+    <p>Ce site est une <strong>proposition de nouveau site</strong> pour la commune de Marchastel, présentée à la mairie. Il n'est pas, à ce stade, le site officiel de la commune : celui-ci reste <a href="{{ site.site_officiel_actuel }}">marchastel15.fr</a>.</p>
+    <p>Auteur de la proposition et directeur de la publication : <a href="https://github.com/victorleblondd">Victor Leblond</a>.</p>
+    <p>Pour toute démarche, adressez-vous à la mairie de Marchastel : {{ m.adresse_ligne1 }}, {{ m.adresse_ligne2 }} · téléphone : <a href="tel:{{ m.telephone_lien }}">{{ m.telephone }}</a> · courriel : <a href="mailto:{{ m.email }}">{{ m.email }}</a>.</p>
+    {%- else %}
+    <p>Commune de Marchastel<br>{{ m.nom }}, {{ m.adresse_ligne1 }}, {{ m.adresse_ligne2 }}<br>Téléphone : <a href="tel:{{ m.telephone_lien }}">{{ m.telephone }}</a> · Courriel : <a href="mailto:{{ m.email }}">{{ m.email }}</a></p>
+    <p>Directeur de la publication : <a href="https://github.com/victorleblondd">Victor Leblond</a>.</p>
+    {%- endif %}
+  </section>
+
+  <section class="bloc" aria-labelledby="titre-hebergement">
+    <h2 id="titre-hebergement">Hébergement</h2>
+    <p>GitHub, Inc. (service GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+  </section>
+
+  <section class="bloc" aria-labelledby="titre-sources">
+    <h2 id="titre-sources">Sources des contenus</h2>
+    <ul>
+      <li>Les avis de la mairie de Marchastel (textes publiés d'avril à octobre 2026) et le site actuel de la commune (<a href="{{ site.site_officiel_actuel }}">marchastel15.fr</a>) : horaires, séances du conseil municipal, présentation et patrimoine de la commune, associations, tri des déchets et fibre optique.</li>
+      <li>Le Répertoire national des élus (ministère de l'Intérieur, version du 11 août 2026) pour le conseil municipal, et la base nationale des intercommunalités (Banatic) pour les groupements dont la commune est membre.</li>
+      <li>L'Insee pour la population légale 2023, le répertoire Sirene pour les associations et l'annuaire de l'éducation pour l'école ; Wikipédia pour la géographie de la commune et la biographie de Léon Boyer.</li>
+      <li>Les bases Mérimée et Palissy du ministère de la Culture pour l'église, ses retables et le viaduc de Barajol.</li>
+      <li>L'office de tourisme Destination Haut Cantal pour le restaurant, le Gentiane Express et ses propres horaires ; le Parc naturel régional des Volcans d'Auvergne pour la boucle VTT des Forêts ; Gîtes de France et les sites des hébergements pour les hébergements.</li>
+      <li>Santé.fr pour la pharmacie et VigiEau, le site de l'État, pour les restrictions liées à la sécheresse (consulté le 15 octobre 2026).</li>
+    </ul>
+  </section>
+
+  <section class="bloc" aria-labelledby="titre-credits">
+    <h2 id="titre-credits">Crédits</h2>
+    <p>Photographie de l'église de Marchastel : Père Igor, <a href="https://commons.wikimedia.org/wiki/File:Marchastel_%C3%A9glise.jpg">Wikimedia Commons</a>, licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>, image recadrée et réduite.</p>
+    <p>Blason du Cantal : dessin de Gretaz et contributeurs, <a href="https://commons.wikimedia.org/wiki/File:Blason_d%C3%A9partement_fr_Cantal.svg">Wikimedia Commons</a>, licence <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.fr">CC BY-SA 3.0</a>, image adaptée.</p>
+  </section>
+
+  <section class="bloc" id="donnees" aria-labelledby="titre-donnees">
+    <h2 id="titre-donnees">Données personnelles</h2>
+    <p>Ce site ne comporte ni formulaire, ni cookie, ni outil de mesure d'audience. L'hébergeur peut enregistrer des données techniques de connexion, comme l'adresse IP, pour assurer la sécurité du service.</p>
+    <p>Pour toute question, contactez la mairie.</p>
+  </section>
+
+  <section class="bloc" id="accessibilite" aria-labelledby="titre-accessibilite">
+    <h2 id="titre-accessibilite">Accessibilité</h2>
+    {%- if site.proposition %}
+    <p>Une fois adopté par la commune, ce site devra être rendu accessible, conformément à l'article 47 de la loi n° 2005-102 du 11 février 2005.</p>
+    {%- else %}
+    <p>La commune de Marchastel s'engage à rendre son site accessible, conformément à l'article 47 de la loi n° 2005-102 du 11 février 2005.</p>
+    {%- endif %}
+    <p><strong>État de conformité : non conforme.</strong> Aucun audit de conformité au référentiel général d'amélioration de l'accessibilité (RGAA) n'a encore été réalisé.</p>
+    <p>Les avis de la mairie sont publiés en texte sur la page <a href="{{ '/infos-alertes/' | relative_url }}">Infos &amp; Alertes</a> ; les documents en PDF auxquels ils renvoient sont ceux des services de l'État.</p>
+    <p>Si vous n'arrivez pas à accéder à un contenu, contactez la mairie au <a href="tel:{{ m.telephone_lien }}">{{ m.telephone }}</a> ou à <a href="mailto:{{ m.email }}">{{ m.email }}</a> : il vous sera transmis sous une autre forme.</p>
+    <p>Si vous n'obtenez pas de réponse satisfaisante, vous pouvez saisir le <a href="https://www.defenseurdesdroits.fr">Défenseur des droits</a>.</p>
+  </section>
+</div>

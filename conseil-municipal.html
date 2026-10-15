@@ -1,0 +1,83 @@
+---
+title: "Le conseil municipal"
+permalink: /conseil-municipal/
+chapo: "Onze élus au service de la commune, élus le 15 mars 2026 pour six ans : le maire, ses trois adjoints et sept conseillers municipaux."
+description: "Le conseil municipal de Marchastel : le maire Jean-Pierre Escourolle, les trois adjoints et les conseillers municipaux élus en mars 2026, et les séances du conseil avec leur ordre du jour."
+---
+{%- assign e = site.data.elus -%}
+{%- assign m = site.data.mairie -%}
+<section class="bloc" aria-labelledby="titre-maire">
+  <h2 id="titre-maire" class="titre-decore">Le maire et les adjoints</h2>
+  <p class="bloc-intro">Pour toute question, contactez l'élu chargé du sujet par l'intermédiaire de la mairie, au <a href="tel:{{ m.telephone_lien }}">{{ m.telephone }}</a>.</p>
+  <div class="grille-4">
+    <div class="panneau carte-elu">
+      <p class="fonction">{{ e.maire.fonction }}</p>
+      <h3 class="nom">{{ e.maire.nom }}</h3>
+    </div>
+    {%- for a in e.adjoints %}
+    <div class="panneau carte-elu">
+      <p class="fonction">{{ a.fonction | replace: "1er", "1<sup>er</sup>" | replace: "2e", "2<sup>e</sup>" | replace: "3e", "3<sup>e</sup>" }}</p>
+      <h3 class="nom">{{ a.nom }}</h3>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<div class="grille-asymetrique bloc">
+  <section class="panneau" aria-labelledby="titre-conseillers">
+    <h2 id="titre-conseillers" class="h3-like">Les conseillers municipaux</h2>
+    <ul class="liste-noms">
+      {%- for c in e.conseillers %}
+      <li>{{ c }}</li>
+      {%- endfor %}
+    </ul>
+    <p class="note">Élus le {{ e.election }}, dès le premier tour. Le conseil a été installé le 20 mars 2026.</p>
+  </section>
+  <div class="pile">
+    <section class="panneau panneau--info" aria-labelledby="titre-publiques">
+      <h2 id="titre-publiques" class="h3-like">Des séances publiques</h2>
+      <p>Les séances du conseil municipal sont publiques et se tiennent en salle du conseil, à la mairie. Leur date et leur ordre du jour sont annoncés dans les Infos &amp; Alertes.</p>
+      <p><a class="lien-fleche" href="{{ '/affichage-legal/' | relative_url }}">Affichage légal{% include icone.html nom="fleche" %}</a></p>
+    </section>
+    <section class="panneau" aria-labelledby="titre-intercommunalite">
+      <h2 id="titre-intercommunalite" class="h3-like">Le Pays Gentiane</h2>
+      <p>Marchastel fait partie de la communauté de communes du Pays Gentiane, qui réunit dix-sept communes autour de Riom-ès-Montagnes, son siège.</p>
+      <p><a class="lien-fleche" href="#groupements">Les groupements dont la commune est membre{% include icone.html nom="fleche" %}</a></p>
+    </section>
+  </div>
+</div>
+
+<section class="bloc" id="seances" aria-labelledby="titre-seances">
+  <h2 id="titre-seances" class="titre-decore">Les séances du conseil en 2026</h2>
+  <p class="bloc-intro">Les ordres du jour publiés par la mairie, de la plus récente à la plus ancienne séance.</p>
+  <div class="grille-2 liste-seances">
+    {%- for s in e.seances %}
+    <article class="panneau seance" id="seance-{{ s.date }}">
+      <p class="surtitre">Séance du conseil municipal</p>
+      <h3><time datetime="{{ s.date }}">{{ s.quand }}</time></h3>
+      <ul>
+        {%- for point in s.ordre_du_jour %}
+        <li>{{ point }}</li>
+        {%- endfor %}
+      </ul>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="bloc" id="groupements" aria-labelledby="titre-groupements">
+  <h2 id="titre-groupements" class="titre-decore">La commune et ses groupements</h2>
+  <p class="bloc-intro">Pour certains services, Marchastel s'associe à d'autres communes au sein de groupements.</p>
+  <div class="panneau">
+    <ul class="liste-noms">
+      <li>Communauté de communes du Pays Gentiane</li>
+      <li>Syndicat intercommunal des eaux de Lugarde-Marchastel</li>
+      <li>Syndicat intercommunal des eaux de la Sumène</li>
+      <li>Syndicat intercommunal de cylindrage de la région de Riom-ès-Montagnes</li>
+      <li>Syndicat départemental d'énergies du Cantal</li>
+      <li>Syndicat mixte AGEDI</li>
+      <li>Syndicat mixte du Parc naturel régional des Volcans d'Auvergne</li>
+    </ul>
+    <p class="note">D'après la base nationale des intercommunalités (Banatic).</p>
+  </div>
+</section>
